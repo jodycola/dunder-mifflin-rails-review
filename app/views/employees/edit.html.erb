@@ -1,0 +1,18 @@
+<h1>Edit Employee Page</h1>
+
+<%=form_for @employee do |f|%>
+<p><%=f.label :first_name, "Enter First Name"%>
+<%= f.text_field :first_name %></p>
+<p><%=f.label :last_name, "Enter Last Name"%>
+<%= f.text_field :last_name %></p>
+<p><%=f.label :alias, "Enter Alias"%>
+<%= f.text_field :alias %></p>
+<p><%=f.label :title, "Enter Title"%>
+<%= f.text_field :title %></p>
+<p><%=f.label :office, "Enter location of office"%>
+<%= f.text_field :office %></p>
+<p><%=f.label :img_url, "Enter picutre url"%>
+<%= f.text_field :img_url %></p>
+<p><%= f.collection_select(:dog_id, Dog.all, :id, :name) %></p>
+<p><%= f.submit "Edit Employee" %></p>
+<%end%>

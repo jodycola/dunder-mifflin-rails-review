@@ -1,0 +1,11 @@
+<h1>Here is a list of all dogs</h1>
+
+<ul>
+<% @dogs.each do |dog|%>
+<li>
+<%= link_to dog.name, dog_path(dog) %>
+</li>
+<% end %>
+</ul>
+
+<button type="button" onclick=dogs_sort_path>Sort</button>
